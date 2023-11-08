@@ -1,0 +1,11 @@
+:root {
+   --red: #EB1F1F;
+   --green: #21BC1E;
+   --bg: #DFF5FF;
+   --white: #FFF;
+   --black:#000;
+   --control: 340px;
+   --modal-bg: rgba(119, 119, 119, 0.7);
+   --box-shadow: rgba(0, 0, 0, 0.06);
+   --border-color: #29aae1
+}
