@@ -1,75 +1,44 @@
-# Nuxt 3 Minimal Starter
+## Запуск фронтенд приложения
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+#### Локальный запуск
 
-## Setup
-
-Make sure to install the dependencies:
-
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+```
+1. npm i                     - установит зависимости
+2. npm run dev                 - запуск фронта
 ```
 
-## Development Server
+### Соглашение по коду Vue 3
 
-Start the development server on `http://localhost:3000`:
+- Согласно рекомендации разработчиков Vue 3 сначала пишем тэг `<script>` после него тэг `<template> `
 
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+```
+<script setup lang="ts">
+...logic code
+</script>
+<template>
+... view code
+</template>
+<style scoped/>
 ```
 
-## Production
+### Структура проекта
 
-Build the application for production:
+#### структура в `src` директории 
 
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+```
+    ├── app                      # входной компонент
+    ├── shared                   # общие переиспользуемые фичи, компоненты для ui и тд
+    ├── pages                    # страницы
+    ├── widgets                  # небольшие блоки состоящие из shared/components/*
 ```
 
-Locally preview production build:
+- **Палитра цветов**
 
-```bash
-# npm
-npm run preview
+Все цвета необходимо записывать в css переменные src/assets/styles/variables, а в стилях указывать цвета из перменных
 
-# pnpm
-pnpm run preview
+### Правило описания хелперов 
 
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Функции хелперы создаются в отдельном файле src/shared/helpers.
+Онда функция = один файл.
+Хелперам необходимо описывать в комментарии отвечая на вопрос "что делает(выполняет) хелпер".
+Так-же необходимо описывать интерфейс хелперов.

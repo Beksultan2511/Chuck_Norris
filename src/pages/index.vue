@@ -81,20 +81,21 @@ const actionButtons = computed(() => getActionButtons(onSubmitClick));
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 40px calc(50% - 250px);
+  margin: 40px calc(50% - 230px);
 
-  @media (max-width: 390px) {
+  @media (max-width: 420px) {
     margin: 40px calc(50% - 185px);
   }
 }
 
 .its-chuck {
   margin-top: 48px;
-  width: 500px;
+  max-width: 500px;
   height: 300px;
   object-fit: cover;
+
   @media (max-width: 390px) {
-    width: 358px;
+    max-width: 358px;
     height: 173px;
   }
 }
